@@ -1,0 +1,15 @@
+:root {
+  --dcc-space-1: 4px;
+  --dcc-space-2: 8px;
+  --dcc-space-3: 12px;
+  --dcc-space-4: 16px;
+  --dcc-space-5: 24px;
+  --dcc-space-6: 32px;
+
+  --dcc-radius-sm: 3px;
+  --dcc-radius-md: 5px;
+
+  --dcc-stat-tile-h: 80px;
+  --dcc-stat-tile-h-compact: 64px;
+  --dcc-control-h: 34px;
+}

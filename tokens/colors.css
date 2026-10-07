@@ -1,0 +1,16 @@
+:root {
+  --dcc-bg-outer: #111315;
+  --dcc-bg-steel: #1b1f23;
+  --dcc-bg-raised: #272c31;
+  --dcc-bg-recessed: #0c0f12;
+  --dcc-edge-steel: #565d63;
+  --dcc-bronze: #786344;
+  --dcc-gold: #f2b544;
+  --dcc-ember: #ce742d;
+  --dcc-text-main: #e7e4de;
+  --dcc-text-secondary: #b9b6af;
+  --dcc-success: #79b96a;
+  --dcc-warning: #e2a23d;
+  --dcc-danger: #de6c62;
+  --dcc-info: #7baec8;
+}

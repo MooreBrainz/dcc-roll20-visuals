@@ -1,0 +1,15 @@
+:root {
+  --dcc-font-display: "Arial Narrow", "Roboto Condensed", sans-serif;
+  --dcc-font-body: Arial, Helvetica, sans-serif;
+}
+
+.dcc-display {
+  font-family: var(--dcc-font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dcc-body {
+  font-family: var(--dcc-font-body);
+}
