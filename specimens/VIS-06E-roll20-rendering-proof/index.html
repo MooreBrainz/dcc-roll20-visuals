@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIS-06E — Roll20 Rendering Proof</title>
+<link rel="stylesheet" href="proof.css">
+</head>
+<body>
+<main class="proof-shell">
+  <section class="proof-header proof-race-tigran proof-class-barbarian" aria-label="Crawler identity header">
+    <div class="proof-race-art" aria-hidden="true"></div>
+    <div class="proof-class-art" aria-hidden="true"></div>
+    <div class="proof-header-shade" aria-hidden="true"></div>
+    <div class="proof-brand">
+      <img src="../../assets/brand/emblems/emblem-crown.svg" alt="" class="proof-crown">
+      <strong>DUNGEON<br>CRAWLER<br><span>CARL</span></strong>
+      <small>ROLL20 CHARACTER SHEET</small>
+    </div>
+    <div class="proof-motto">SURVIVE<br>ADAPT<br>ENTERTAIN</div>
+    <div class="proof-identity" data-r42="attr_vn_crawler_identity / attr_vn_race_display_name / attr_vn_class_display_name">
+      <div><small>CRAWLER</small><b>Kael</b></div>
+      <div><small>RACE</small><b>Tigran</b></div>
+      <div><small>CLASS</small><b>Feral Cat Berserker</b></div>
+      <label class="proof-entity"><small>ENTITY</small><select aria-label="Entity Mode"><option>CRAWLER</option><option>COMPANION</option><option>ADVERSARY</option><option>SAFE ROOM</option></select></label>
+    </div>
+    <div class="proof-levels" data-r42="attr_lvl / attr_floor_current"><span><small>LEVEL</small><b>5</b></span><span><small>FLOOR</small><b>4</b></span></div>
+  </section>
+
+  <nav class="proof-tabs" aria-label="Sheet tabs" data-r42="act_vn_tab_4, act_vn_tab_1, act_vn_tab_3, act_vn_tab_2, act_vn_tab_5, act_vn_tab_6, act_vn_tab_7">
+    <button class="is-selected">CHARACTER</button><button>COMBAT</button><button>SKILLS &amp; SPELLS</button><button>INVENTORY</button><button>ACHIEVEMENTS</button><button>DEITIES</button><button>SOCIALS</button>
+  </nav>
+
+  <section class="proof-grid">
+    <article class="proof-panel proof-panel-wide">
+      <header><span>CORE STATS</span><em>BASE / ENHANCED / MOD</em></header>
+      <div class="proof-stats" data-r42="attr_str_base, attr_int_base, attr_con_base, attr_dex_base, attr_char_base + derived enhanced/mod fields">
+        <label class="proof-stat"><small>STR</small><input value="18" aria-label="Strength base"><b>18</b><span>+4</span></label>
+        <label class="proof-stat"><small>INT</small><input value="12" aria-label="Intelligence base"><b>12</b><span>+1</span></label>
+        <label class="proof-stat"><small>CON</small><input value="16" aria-label="Constitution base"><b>16</b><span>+3</span></label>
+        <label class="proof-stat"><small>DEX</small><input value="14" aria-label="Dexterity base"><b>14</b><span>+2</span></label>
+        <label class="proof-stat"><small>CHA</small><input value="10" aria-label="Charisma base"><b>10</b><span>+0</span></label>
+      </div>
+      <p class="proof-note">Five-stat model preserved from R42. The editable base control remains live HTML; the ornate frame is decorative.</p>
+    </article>
+
+    <article class="proof-panel">
+      <header><span>STATUS</span><em>LIVE</em></header>
+      <div class="proof-kv"><span><small>DR</small><b>4</b></span><span><small>MOVE</small><b>25</b></span><span><small>STEP</small><b>10</b></span><span><small>INJURIES</small><b>NONE</b></span></div>
+      <div class="proof-source-badge">RACE SOURCE · TIGRAN</div>
+    </article>
+
+    <article class="proof-panel proof-panel-wide">
+      <header><span>HEALTH BAR SLOTS</span><em>EXISTING 10-SLOT SYSTEM</em></header>
+      <div class="proof-hb" data-r42="attr_hpfill_10 … attr_hpfill_100 / attr_hp10 … attr_hp100">
+        <label class="filled"><input type="checkbox" checked><span><small>10%</small><b>3</b></span></label>
+        <label class="filled"><input type="checkbox" checked><span><small>20%</small><b>3</b></span></label>
+        <label class="filled"><input type="checkbox" checked><span><small>30%</small><b>3</b></span></label>
+        <label class="filled"><input type="checkbox" checked><span><small>40%</small><b>3</b></span></label>
+        <label class="filled"><input type="checkbox" checked><span><small>50%</small><b>3</b></span></label>
+        <label class="filled"><input type="checkbox" checked><span><small>60%</small><b>3</b></span></label>
+        <label class="filled"><input type="checkbox" checked><span><small>70%</small><b>3</b></span></label>
+        <label><input type="checkbox"><span><small>80%</small><b>3</b></span></label>
+        <label><input type="checkbox"><span><small>90%</small><b>3</b></span></label>
+        <label><input type="checkbox"><span><small>100%</small><b>3</b></span></label>
+      </div>
+      <p class="proof-note">Health is demonstrated only in working content. There is intentionally no Health or Mana display in the cinematic header.</p>
+    </article>
+
+    <article class="proof-panel">
+      <header><span>REPEATING ROW</span><em>SOURCE-AWARE RECORD</em></header>
+      <div class="proof-row" data-r42="Representative of repeating sections such as repeating_skills / repeating_internalbuffs">
+        <span class="proof-row-icon">✦</span><div><b>Cat-Like Reflexes</b><small>Race · Tigran</small></div><span class="proof-pill">PASSIVE</span><button>DETAIL</button>
+      </div>
+      <div class="proof-row is-selected"><span class="proof-row-icon">⚔</span><div><b>Unarmed Combat</b><small>Skill · R7</small></div><span class="proof-pill">KNOWN</span><button>ROLL</button></div>
+    </article>
+
+    <article class="proof-panel proof-panel-chat">
+      <header><span>CHAT CARD</span><em>REPRESENTATIVE</em></header>
+      <div class="proof-chat"><small>SKILL CHECK</small><b>UNARMED COMBAT</b><span>1d20 + 4</span><strong>17</strong><em>SUCCESS</em></div>
+    </article>
+  </section>
+  <footer>VIS-06E · ROLL20 RENDERING PROOF · VISUAL DESIGN ONLY · SURVIVE // ADAPT // ENTERTAIN</footer>
+</main>
+</body>
+</html>

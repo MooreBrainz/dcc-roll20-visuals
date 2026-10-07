@@ -64,9 +64,21 @@ docs/
   vis-specs/
 ```
 
-## Milestones
+## Current milestone
 
-Visual deliverables use the `VIS-xx` namespace. The immediate implementation-proof milestone is **VIS-06E — Roll20 Rendering Proof**, which will demonstrate that the approved ornate treatment can be built from reusable assets and Roll20-compatible HTML/CSS rather than flattened mockup art.
+**VIS-06E — Roll20 Rendering Proof** is now populated with its first real reusable proof assets and a browser specimen. It is mapped back to the current R42 relationships rather than inventing replacement systems.
+
+Current proof assets include:
+
+- Tigran race-header proof SVG.
+- Neutral industrial fallback SVG.
+- Barbarian-family claw/impact overlay SVG.
+- Reusable panel-border, corner, and bronze-divider SVGs.
+- Crown emblem.
+- HTML/CSS rendering specimen.
+- R42 relationship mapping notes.
+
+The race-header SVG is intentionally a replaceable proof asset. Final cinematic race artwork can later take its place without changing the structural layering.
 
 ## Asset philosophy
 
@@ -74,4 +86,4 @@ Race banners should be independent from class overlays. Avoid generating every R
 
 ## Status
 
-Repository scaffold created for the visual-design stream. Production HTML/CSS/workers remain outside this repository until an explicit handoff is approved.
+Visual repository only. Production HTML/CSS/workers remain outside this repository until an explicit handoff is approved.

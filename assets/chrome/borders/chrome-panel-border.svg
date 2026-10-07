@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#596067"/><stop offset=".18" stop-color="#16191c"/><stop offset=".82" stop-color="#0b0d0f"/><stop offset="1" stop-color="#42484e"/></linearGradient>
+  </defs>
+  <rect x="3" y="3" width="594" height="214" rx="8" fill="none" stroke="url(#metal)" stroke-width="6"/>
+  <rect x="9" y="9" width="582" height="202" rx="5" fill="none" stroke="#8b693e" stroke-opacity=".78" stroke-width="1.5"/>
+  <path d="M13 35L35 13M565 13l22 22M13 185l22 22M565 207l22-22" stroke="#d08a36" stroke-opacity=".72" stroke-width="2"/>
+</svg>
