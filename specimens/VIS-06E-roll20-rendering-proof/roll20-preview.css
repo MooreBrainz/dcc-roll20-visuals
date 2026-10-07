@@ -7,8 +7,20 @@
 .vis06e-root *{box-sizing:border-box}
 .vis06e-banner{height:240px;position:relative;overflow:hidden;border-bottom:2px solid #74552f;background:#111}
 .vis06e-race-layer,.vis06e-class-layer,.vis06e-shade{position:absolute;inset:0;background-size:cover;background-position:center}
-.vis06e-race-layer{background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/races/race-tigran-proof.svg")}
-.vis06e-class-layer{background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/class-overlays/class-barbarian-claw-impact.svg");opacity:.9}
+.vis06e-race-layer{
+  background-color:#1a0d07;
+  background-image:
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/races/race-tigran-proof.svg"),
+    radial-gradient(circle at 72% 46%,rgba(220,92,20,.42) 0,rgba(80,25,5,.16) 29%,rgba(0,0,0,0) 55%),
+    repeating-linear-gradient(104deg,#08090a 0 28px,#b74813 29px 58px,#e17225 59px 76px,#111315 77px 111px,#c25116 112px 143px,#090a0b 144px 176px);
+}
+.vis06e-class-layer{
+  background-image:
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/class-overlays/class-barbarian-claw-impact.svg"),
+    linear-gradient(90deg,rgba(0,0,0,0) 0 63%,rgba(142,18,5,.08) 70%,rgba(210,42,12,.22) 100%),
+    repeating-linear-gradient(104deg,transparent 0 1120px,rgba(255,74,24,.28) 1121px 1133px,transparent 1134px 1190px);
+  opacity:.9;
+}
 .vis06e-shade{background:linear-gradient(90deg,rgba(0,0,0,.36),rgba(0,0,0,.03) 36%,rgba(0,0,0,.08) 66%,rgba(0,0,0,.72));box-shadow:inset 0 -38px 60px rgba(0,0,0,.44)}
 .vis06e-brand,.vis06e-motto,.vis06e-identity,.vis06e-levels{position:absolute;z-index:2}
 .vis06e-brand{left:24px;top:24px;width:190px;height:184px;padding:18px 16px 10px;background:rgba(7,8,9,.82);border:1px solid #8b693e}
