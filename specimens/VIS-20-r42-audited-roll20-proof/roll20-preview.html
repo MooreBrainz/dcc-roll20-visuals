@@ -1,0 +1,145 @@
+<div class="sheet-vis20-root">
+  <input class="sheet-vis20-tabradio" id="vis20-character" name="attr_vis20_preview_tab" type="radio" value="character" checked>
+  <input class="sheet-vis20-tabradio" id="vis20-skills" name="attr_vis20_preview_tab" type="radio" value="skills">
+  <input class="sheet-vis20-tabradio" id="vis20-socials" name="attr_vis20_preview_tab" type="radio" value="socials">
+
+  <div class="sheet-vis20-shell">
+    <header class="sheet-vis20-hero">
+      <div class="sheet-vis20-raceart" aria-hidden="true"></div>
+      <div class="sheet-vis20-classfx" aria-hidden="true"></div>
+      <div class="sheet-vis20-brand">
+        <b>DUNGEON CRAWLER CARL</b>
+        <span>ROLL20 CHARACTER SHEET // VISUAL PROOF</span>
+      </div>
+      <div class="sheet-vis20-identity">
+        <label class="sheet-vis20-wide"><small>NAME</small><input name="attr_character_name" value="Kael" type="text"></label>
+        <label><small>RACE</small><select name="attr_race"><option selected>Tigran</option></select></label>
+        <label><small>CLASS</small><select name="attr_class"><option selected>Feral Cat Berserker</option></select></label>
+        <label><small>ENTITY</small><select name="attr_vn_entity_mode"><option selected>CRAWLER</option><option>COMPANION</option><option>ADVERSARY</option><option>PERSONAL_SPACE</option></select></label>
+        <label class="sheet-vis20-small"><small>LEVEL</small><input name="attr_lvl" value="5" type="number"></label>
+        <label class="sheet-vis20-small"><small>FLOOR</small><input name="attr_floor_current" value="4" type="number"></label>
+      </div>
+    </header>
+
+    <nav class="sheet-vis20-tabs" aria-label="Crawler tabs">
+      <label for="vis20-character">CHARACTER</label>
+      <span>COMBAT</span>
+      <label for="vis20-skills">SKILLS &amp; SPELLS</label>
+      <span>INVENTORY</span>
+      <span>ACHIEVEMENTS</span>
+      <span>DEITIES</span>
+      <label for="vis20-socials">SOCIALS</label>
+    </nav>
+
+    <main class="sheet-vis20-pages">
+      <section class="sheet-vis20-page sheet-vis20-page-character">
+        <div class="sheet-vis20-pagehead"><div><small>CHARACTER</small><h2>CORE CHARACTER STATE</h2></div><span>R42 RELATIONSHIPS PRESERVED</span></div>
+
+        <section class="sheet-vis20-panel">
+          <div class="sheet-vis20-panelhead"><h3>CORE STATS</h3><span>UNENHANCED / ENHANCED / MOD</span></div>
+          <div class="sheet-vis20-stats">
+            <div class="sheet-vis20-stat"><small>STRENGTH</small><b>18</b><span>MOD +3</span><label>UNENHANCED<input value="16" type="number"></label><button type="button">CHECK</button></div>
+            <div class="sheet-vis20-stat"><small>INTELLIGENCE</small><b>10</b><span>MOD +0</span><label>UNENHANCED<input value="10" type="number"></label><button type="button">CHECK</button></div>
+            <div class="sheet-vis20-stat"><small>CONSTITUTION</small><b>16</b><span>MOD +2</span><label>UNENHANCED<input value="15" type="number"></label><button type="button">CHECK</button></div>
+            <div class="sheet-vis20-stat"><small>DEXTERITY</small><b>14</b><span>MOD +2</span><label>UNENHANCED<input value="13" type="number"></label><button type="button">CHECK</button></div>
+            <div class="sheet-vis20-stat"><small>CHARISMA</small><b>13</b><span>MOD +1</span><label>UNENHANCED<input value="13" type="number"></label><button type="button">CHECK</button></div>
+          </div>
+        </section>
+
+        <div class="sheet-vis20-two">
+          <section class="sheet-vis20-panel">
+            <div class="sheet-vis20-panelhead"><h3>STATUS</h3><span>SOURCE-AWARE</span></div>
+            <div class="sheet-vis20-statusrow"><b>INTERNAL EFFECTS</b><span class="sheet-vis20-pill sheet-vis20-active">2 ACTIVE</span><span>Class and race-owned effects remain separate from selected external buffs.</span></div>
+            <div class="sheet-vis20-statusrow"><b>EXTERNAL BUFFS</b><span class="sheet-vis20-pill">2 / 3</span><span>The three-selection indicator applies here only.</span></div>
+            <div class="sheet-vis20-statusrow"><b>DEBUFFS / INJURIES</b><span class="sheet-vis20-pill sheet-vis20-warn">1 ACTIVE</span><span>Do not collapse these into the external-buff limit.</span></div>
+          </section>
+          <section class="sheet-vis20-panel">
+            <div class="sheet-vis20-panelhead"><h3>IDENTITY / SETUP</h3><span>EDIT ON CHARACTER</span></div>
+            <div class="sheet-vis20-fields">
+              <label>CRAWLER #<input name="attr_crawl_num" value="4119" type="text"></label>
+              <label>SIZE<input name="attr_size" value="5" type="number"></label>
+              <label>RACE STATUS<input value="READY" readonly></label>
+              <label>CLASS STATUS<input value="READY" readonly></label>
+            </div>
+            <div class="sheet-vis20-callout">Race/Class setup remains a live system surface; the cinematic banner is presentation, not a replacement for configuration and runtime actions.</div>
+          </section>
+        </div>
+      </section>
+
+      <section class="sheet-vis20-page sheet-vis20-page-skills">
+        <div class="sheet-vis20-pagehead"><div><small>SKILLS &amp; SPELLS</small><h2>ENTRY-HEAVY LIBRARIES</h2></div><span>STACKED FOR HORIZONTAL ROOM</span></div>
+
+        <section class="sheet-vis20-panel">
+          <div class="sheet-vis20-libraryhead"><div><h3>SKILL LIBRARY</h3><span>REPEATING / SOURCE-AWARE</span></div><div class="sheet-vis20-tools"><input placeholder="Search Skills"><button type="button">SEARCH</button><button name="act_vn_add_skill" type="action">+ ADD SKILL</button></div></div>
+          <div class="sheet-vis20-table sheet-vis20-skilltable">
+            <div class="sheet-vis20-row sheet-vis20-th"><span>NAME</span><span>RANK / STAT</span><span>TYPES</span><span>WHAT IT DOES</span><span>ACTIONS</span></div>
+            <div class="sheet-vis20-row"><strong>Climbing</strong><span>R4 / DEX</span><span><i>UTILITY</i><i>MOVEMENT</i></span><span>Move across difficult vertical surfaces.</span><span class="sheet-vis20-actions"><label class="sheet-vis20-advance"><input type="checkbox" name="attr_improve"> ♥ ADVANCE</label><button name="act_focus" type="action">DETAIL</button><button name="act_rollskill" type="action">ROLL</button></span></div>
+            <div class="sheet-vis20-row"><strong>Back Claw</strong><span>R6 / STR</span><span><i>ATTACK</i><i>ANIMAL</i></span><span>Natural weapon attack; source and rule text remain in row detail.</span><span class="sheet-vis20-actions"><label class="sheet-vis20-advance"><input type="checkbox" name="attr_improve"> ♥ ADVANCE</label><button name="act_focus" type="action">DETAIL</button><button name="act_combat" class="sheet-vis20-red" type="action">ADD COMBAT</button></span></div>
+            <div class="sheet-vis20-row"><strong>Acute Ears</strong><span>R5 / INT</span><span><i>UTILITY</i><i>SENSE</i></span><span>Source-aware passive/utility entry with compact type pills.</span><span class="sheet-vis20-actions"><label class="sheet-vis20-advance"><input type="checkbox" name="attr_improve"> ♥ ADVANCE</label><button name="act_focus" type="action">DETAIL</button><button name="act_rollskill" type="action">ROLL</button></span></div>
+          </div>
+          <div class="sheet-vis20-detailhint">DETAIL remains row-local and hidden until toggled; no permanent third detail panel is introduced.</div>
+        </section>
+
+        <section class="sheet-vis20-panel">
+          <div class="sheet-vis20-libraryhead"><div><h3>SPELL LIBRARY</h3><span>LEARNED SPELLS</span></div><div class="sheet-vis20-tools"><input placeholder="Search learned Spells"><button type="button">SEARCH</button><button name="act_vn_learn_spell" type="action">+ LEARN SPELL</button></div></div>
+          <div class="sheet-vis20-table sheet-vis20-spelltable">
+            <div class="sheet-vis20-row sheet-vis20-th"><span>NAME</span><span>RANK / MANA</span><span>TYPES</span><span>WHAT IT DOES</span><span>ACTIONS</span></div>
+            <div class="sheet-vis20-row"><strong>Frost Scar</strong><span>R3 / 3</span><span><i>ATTACK</i><i>COLD</i></span><span>Representative learned Spell; details stay in the existing expanded card.</span><span class="sheet-vis20-actions"><label class="sheet-vis20-advance"><input type="checkbox" name="attr_improve"> ♥ ADVANCE</label><button name="act_prepare" type="action">PREP</button><button name="act_hotlistadd" class="sheet-vis20-gold" type="action">HOT</button></span></div>
+            <div class="sheet-vis20-row"><strong>Ice Blast</strong><span>R4 / 4</span><span><i>ATTACK</i><i>AREA</i></span><span>Preparation routes to the shared Spell Casting panel.</span><span class="sheet-vis20-actions"><label class="sheet-vis20-advance"><input type="checkbox" name="attr_improve"> ♥ ADVANCE</label><button name="act_prepare" type="action">PREP</button><button name="act_hotlistadd" class="sheet-vis20-gold" type="action">HOT</button></span></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="sheet-vis20-page sheet-vis20-page-socials">
+        <div class="sheet-vis20-pagehead"><div><small>SOCIALS</small><h2>PUBLIC PRESENCE</h2></div><span>CLUBS / POPULARITY / SPONSORS</span></div>
+
+        <div class="sheet-vis20-socialgrid">
+          <div class="sheet-vis20-socialleft">
+            <section class="sheet-vis20-panel">
+              <div class="sheet-vis20-panelhead"><h3>PUBLIC PROFILE</h3><span>CRAWLER</span></div>
+              <div class="sheet-vis20-profile">
+                <div class="sheet-vis20-profilemark">T</div>
+                <div><b>Kael</b><span>Tigran // Feral Cat Berserker</span><span>Level 5 // Floor 4</span><span>Crawler #4119</span></div>
+              </div>
+            </section>
+            <section class="sheet-vis20-panel">
+              <div class="sheet-vis20-panelhead"><h3>POPULARITY</h3><span>PUBLIC PROFILE / TOP TEN</span></div>
+              <div class="sheet-vis20-pop">
+                <div class="sheet-vis20-popcircle"><strong>32</strong><span>KNOWN</span></div>
+                <div class="sheet-vis20-popbands"><span>LEGENDARY <b>91–100</b></span><span>RENOWNED <b>71–90</b></span><span>RESPECTED <b>51–70</b></span><span class="sheet-vis20-popcurrent">KNOWN <b>26–50</b></span><span>NOTED <b>11–25</b></span><span>OBSCURE <b>0–10</b></span></div>
+              </div>
+              <div class="sheet-vis20-fields sheet-vis20-popfields"><label>OFFICIAL RANK<select name="attr_vn_topten_rank"><option>OFF LIST / PLACEMENT UNKNOWN</option><option selected>#8</option></select></label><label>CURRENT BOUNTY<input value="100,000 GOLD" readonly></label></div>
+            </section>
+          </div>
+
+          <div class="sheet-vis20-socialright">
+            <section class="sheet-vis20-panel sheet-vis20-clubs">
+              <div class="sheet-vis20-panelhead"><h3>MEMBERS-ONLY CLUBS</h3><span>EXISTING BADGE FAMILY</span></div>
+              <div class="sheet-vis20-clubrail">
+                <div class="sheet-vis20-club active"><img src="https://files.d20.io/images/503278403/2M0Vr8tlRFz4tzuFEaYD4A/original.webp" alt=""><b>ALL CLUB ACCESS</b><small>CLASS // SOURCE</small></div>
+                <div class="sheet-vis20-club active"><img src="https://files.d20.io/images/503209139/cI6rfn0hJ0nnl-DO8x9NWg/original.webp?1791142886" alt=""><b>CLUB VANQUISHER</b><small>DEITY // SOURCE</small></div>
+                <div class="sheet-vis20-club active"><img src="https://files.d20.io/images/503209135/dcv60AiJCdWV6RcBSDNkKA/original.webp?1791142886" alt=""><b>THE DESPERADO CLUB</b><small>CLASS // SOURCE</small></div>
+                <div class="sheet-vis20-club locked"><img src="https://files.d20.io/images/503278404/DBM-Dl0ePrf-wPiQLhSBdQ/original.webp" alt=""><b>BOOK OF THE FLOOR CLUB</b><small>LOCKED</small></div>
+                <div class="sheet-vis20-club locked"><img src="https://files.d20.io/images/503278401/Cny4sYy_4miDD7wiZ5ZDQg/original.webp" alt=""><b>GUILD OF SUFFERING</b><small>LOCKED</small></div>
+                <div class="sheet-vis20-club locked"><img src="https://files.d20.io/images/503278402/k62ZIKwXCzAJ1TL7p1yeig/original.webp" alt=""><b>NAUGHTY BOYS EMPLOYMENT AGENCY</b><small>LOCKED</small></div>
+              </div>
+            </section>
+
+            <div class="sheet-vis20-socialbottom">
+              <section class="sheet-vis20-panel">
+                <div class="sheet-vis20-panelhead"><h3>MEDIA &amp; INTERVIEWS</h3><span>R42 // DEFERRED</span></div>
+                <div class="sheet-vis20-empty"><b>DESTINATION LOCKED</b><span>Interview shows, public appearances and shared Playing-to-the-Cameras integration belong here when the production system owns them.</span></div>
+              </section>
+              <section class="sheet-vis20-panel">
+                <div class="sheet-vis20-panelhead"><h3>SPONSORS</h3><span>CONTRACTS / BENEFACTOR BOXES</span></div>
+                <div class="sheet-vis20-sponsor"><div class="sheet-vis20-handshake">◆</div><b>NO ACTIVE SPONSOR</b><span>0 / 3 active contracts</span><span>Floor 4 sponsorship state is tracked by the existing system.</span></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sheet-vis20-footer"><span>VIS-20 // R42-AUDITED RENDERING PROOF</span><span>DRAMA IN THE FRAME // CLARITY IN THE FIELDS</span></footer>
+  </div>
+</div>
