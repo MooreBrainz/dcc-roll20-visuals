@@ -1,0 +1,214 @@
+/*
+ VIS-25 / R42 VISUAL COMPONENT BRIDGE — OPT-IN PILOT
+ Tested for selector presence against the supplied V38_R42_ENGINEERING.zip.
+ NO production migration is authorized by this file.
+ Load after the current trusted engineering CSS, then add
+ "sheet-vis25-skin" to the existing sheet-vn-wrapper for a sandbox pilot.
+ Panel ornament, buttons and fields require separate per-element opt-in classes.
+
+ PROTECTED: all attr_, act_, and repeating_ contracts; hidden inputs, sheet-vn-tabstate and
+ sheet-vn-pagestate adjacency; source/color gates; HP slots and spell HUD.
+ No :has(), JS, Google Fonts, SVGs, gradients as substitutes for state.
+*/
+
+.sheet-vn-wrapper.sheet-vis25-skin{
+  --vis25-bg:#0d1113;
+  --vis25-panel:#12181b;
+  --vis25-recess:#0a1013;
+  --vis25-steel:#555d60;
+  --vis25-seam:#78634b;
+  --vis25-amber:#d8a568;
+  --vis25-text:#e7e4dd;
+  --vis25-muted:#b8b8b3;
+  background:#0d1113;
+  color:#e7e4dd;
+}
+
+/* 01 / Native R42 navigation. Keep all seven action buttons and their
+   hidden sibling .sheet-vn-tabstate elements in their original order. */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-tabbar{
+  background:#0c1114;
+  border-bottom:1px solid #574b3b;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-tabbar .sheet-vn-tabbtn{
+  border:1px solid #4a5255!important;
+  border-bottom:0!important;
+  border-radius:4px 4px 0 0!important;
+  background-color:#13181a!important;
+  background-image:
+    linear-gradient(180deg,rgba(7,10,12,.52),rgba(7,10,12,.65)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-dark.png")!important;
+  background-size:100% 100%,100% 170%!important;
+  background-position:center,center!important;
+  color:#c4c5c0!important;
+  box-shadow:inset 0 1px 0 rgba(218,208,185,.10)!important;
+  text-shadow:0 1px 1px #000;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-tabstate[value="1"]+.sheet-vn-tabbtn{
+  border-color:#957b54!important;
+  color:#f1c58e!important;
+  background-color:#211b13!important;
+  background-image:
+    linear-gradient(180deg,rgba(7,10,12,.42),rgba(7,10,12,.54)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-active.png")!important;
+  box-shadow:inset 0 -2px 0 rgba(177,122,52,.7),inset 0 1px 0 rgba(233,189,113,.13)!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-tabbar .sheet-vn-tabbtn:focus-visible{
+  outline:2px solid #d8a568!important;
+  outline-offset:1px;
+}
+
+/* 02 / Pilot panels. Opt in ONLY the intended existing .sheet-vn-panel
+   by adding "sheet-vis25-panel"; do not globally replace all R42 panels.
+   Transparent no-fill border-image keeps actual content readable. */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel{
+  position:relative;
+  background:#12181b;
+  border:1px solid #485053;
+  border-radius:5px;
+  box-shadow:inset 0 1px 0 rgba(214,202,182,.06),0 4px 13px rgba(0,0,0,.34);
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel:after{
+  content:"";
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  z-index:4;
+  border:11px solid transparent;
+  border-image-source:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/panels/panel-frame-wide.png");
+  border-image-slice:135 135 135 135;
+  border-image-width:11px;
+  border-image-repeat:stretch;
+  filter:brightness(.67) saturate(.55);
+  opacity:.85;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel.sheet-vis25-panel--sidebar:after{
+  border-image-source:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/panels/panel-frame-sidebar-tall.png");
+  border-image-slice:205 200 205 200;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel.sheet-vis25-panel--quiet:after{
+  content:none;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel>header{
+  position:relative;
+  background:linear-gradient(180deg,#1c2225,#0f1517);
+  color:#e7e4dd;
+  border-bottom:1px solid #524b3f;
+  text-shadow:0 1px 1px #000;
+}
+/* Heading detail (no full-width stretched metal frame). */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel>header:after{
+  content:"";
+  pointer-events:none;
+  position:absolute;
+  height:2px;
+  left:13px;
+  right:13px;
+  bottom:0;
+  background:linear-gradient(90deg,rgba(177,130,74,.55),rgba(111,89,57,.14) 45%,rgba(177,130,74,.34));
+}
+
+/* 03 / Action buttons. Add "sheet-vis25-control" to selected live
+   .sheet-vn-btn elements. The existing act_* name remains unchanged.
+   Existing .sheet-vn-blue/red/gold and disabled states remain semantic. */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control{
+  border:1px solid #596266!important;
+  border-radius:3px!important;
+  background:linear-gradient(180deg,#292e31,#12181a)!important;
+  color:#e4e4df!important;
+  box-shadow:inset 0 1px 0 rgba(226,230,230,.11)!important;
+  text-shadow:0 1px 1px #000;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control.sheet-vn-gold{
+  border-color:#826849!important;
+  color:#efc793!important;
+  background:linear-gradient(180deg,#302719,#171714)!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control.sheet-vn-red{
+  border-color:#805046!important;
+  color:#e2b1aa!important;
+  background:linear-gradient(180deg,#30201e,#171415)!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control.sheet-vn-blue{
+  border-color:#5a7480!important;
+  color:#d3e1e6!important;
+  background:linear-gradient(180deg,#243038,#141a1e)!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control.sheet-vn-ghost{
+  border-color:#444b4f!important;
+  color:#b8bbb8!important;
+  background:#161b1e!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control:focus-visible{
+  outline:2px solid #d8a568!important;
+  outline-offset:1px;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-btn.sheet-vis25-control:disabled{
+  opacity:.48;
+  box-shadow:none!important;
+}
+
+/* 04 / Inset editable controls — opt in chosen visible input/select/
+   textarea with "sheet-vis25-field". Hidden inputs/gates never receive it.
+   Height and width remain owned by R42 form and grid rules. */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-input.sheet-vis25-field{
+  border:1px solid #586163!important;
+  background-color:#0a1013!important;
+  color:#e7e4dd!important;
+  box-shadow:inset 0 2px 5px rgba(0,0,0,.65)!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-input.sheet-vis25-field:focus{
+  border-color:#d8a568!important;
+  outline:2px solid #d8a568!important;
+  outline-offset:1px;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-input.sheet-vis25-field[readonly]{
+  color:#c0c3bd!important;
+  border-color:#424d50!important;
+  background-color:#101719!important;
+}
+
+/* 05 / R42's pills ARE ALREADY ROUND and COLOUR-GATED by hidden
+   .sheet-vn-summarytone and .sheet-vn-familytone sibling inputs.
+   Do not override their border, background, text colour, or gate selectors.
+   Only ensure pill geometry/legibility inside live skill/spell summaries. */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-skillsummary .sheet-vn-typepill,
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-spellsummary .sheet-vn-typepill{
+  border-radius:999px!important;
+  line-height:1.25!important;
+  padding:4px 7px!important;
+  font-size:8.5px!important;
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-skillsummary .sheet-vn-summarypills,
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-spellsummary .sheet-vn-summarypills{
+  min-width:0;
+}
+
+/* 06 / Native five-stat row pilot. These are compact R42 rows, not the
+   specimen's larger tiles. Opt in on selected .sheet-vn-stat only. */
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-stat.sheet-vis25-stat{
+  border:1px solid #4b5355;
+  border-radius:4px;
+  background:linear-gradient(180deg,#1b2123,#101518);
+  box-shadow:inset 0 1px 0 rgba(205,187,157,.07);
+}
+.sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-stat.sheet-vis25-stat>b{
+  color:#d7b27b;
+  text-shadow:0 1px 1px #000;
+}
+
+/* 07 / Explicit exclusions. These functional structures are NEVER
+   restyled by this bridge:
+   - .sheet-vn-tabstate / .sheet-vn-pagestate and entity-mode gates
+   - .sheet-vn-focusopen / .sheet-vn-skilldetails visibility contract
+   - .sheet-vn-hp and health-slot checked states
+   - .sheet-vn-clublogogate and its image/provenance lock rules
+   - .sheet-vn-summarytone / .sheet-vn-familytone inputs
+   - repeating section .repitem/.repcontrol controls
+   - owned combat, deity, inventory, quest and reward resolvers.
+*/
+@media(max-width:720px){
+  .sheet-vn-wrapper.sheet-vis25-skin .sheet-vn-panel.sheet-vis25-panel:after{
+    border-image-width:8px;
+  }
+}

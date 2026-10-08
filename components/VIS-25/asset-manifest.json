@@ -1,0 +1,37 @@
+{
+  "milestone": "VIS-25",
+  "description": "R42-sourced opt-in visual component bridge (no production mutation)",
+  "source_snapshot": "V38_R42_ENGINEERING.zip",
+  "css": "components/VIS-25/vis25-r42-bridge.css",
+  "opt_in_root_class": "sheet-vis25-skin",
+  "controls": {
+    "panel": "sheet-vis25-panel",
+    "sidebar_panel": "sheet-vis25-panel--sidebar",
+    "quiet_panel": "sheet-vis25-panel--quiet",
+    "action_button": "sheet-vis25-control",
+    "visible_input": "sheet-vis25-field",
+    "five_stat_row": "sheet-vis25-stat"
+  },
+  "assets": [
+    "assets/chrome/panels/panel-frame-wide.png",
+    "assets/chrome/panels/panel-frame-sidebar-tall.png",
+    "assets/chrome/fields/field-frame-dark.png",
+    "assets/chrome/fields/field-frame-active.png"
+  ],
+  "reserved_assets": [
+    "assets/chrome/panels/panel-frame-large.png",
+    "assets/chrome/dividers/divider-bar-amber.png",
+    "assets/banners/races/gritty_tiger_warrior_banner_roll20.jpg"
+  ],
+  "preserved_state_systems": [
+    "tabs and entity modes",
+    "native skill/spell tone and family gates",
+    "skill detail visibility",
+    "repeating sections",
+    "health bar and casting",
+    "club access/provenance",
+    "safe room loot resolution"
+  ],
+  "production_ready": false,
+  "status": "pilot CSS prepared, pending latest development source and Roll20 QA"
+}
