@@ -31,3 +31,12 @@ No Health or Mana appears in the header.
 ## Important
 
 Do not copy this specimen directly over production R42. The later engineering handoff must port the approved visuals into the then-current source while preserving worker/binding/repeating-section/gate contracts and rerunning the normal regression suite.
+
+
+## VIS-21 — Chrome Integration (visual proof)
+
+The approved industrial chrome assets are now referenced from the proof CSS. Resizable content-panel corners are applied using a 9-sliced decorative overlay; section dividers and focused/read-only field textures use their own dedicated assets.
+
+The optional chrome is **presentation only**; it does not change the HTML, actions, repeating sections or runtime mechanics. See [VIS-21-CHROME-QA.md](VIS-21-CHROME-QA.md) for the exact asset map, smoke-test notes and the live Roll20 review checklist.
+
+Use the current `roll20-preview.css` with the existing `roll20-preview.html` in the sandbox.
