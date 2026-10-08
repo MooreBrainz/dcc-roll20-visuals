@@ -43,3 +43,77 @@
 .sheet-vis20-socialbottom{display:grid;grid-template-columns:1.15fr .85fr;gap:8px}.sheet-vis20-empty,.sheet-vis20-sponsor{min-height:170px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:9px;color:#a8a49c}.sheet-vis20-empty b,.sheet-vis20-sponsor b{color:#ddd8cf;font-size:16px}.sheet-vis20-handshake{font-size:32px;color:#c08a45}.sheet-vis20-footer{display:flex;justify-content:space-between;padding:8px 15px;border-top:1px solid #5d4930;background:#080a0b;color:#77716a;font-size:9px;letter-spacing:.14em}
 @media(max-width:1050px){.sheet-vis20-hero{grid-template-columns:1fr;min-height:300px}.sheet-vis20-raceart{background-size:100% 100%,100% auto;background-position:center center,center top}.sheet-vis20-brand{min-height:150px}.sheet-vis20-identity{grid-template-columns:repeat(3,1fr);background:rgba(6,8,9,.84)}.sheet-vis20-identity .sheet-vis20-wide{grid-column:1/2}.sheet-vis20-identity label:nth-child(2),.sheet-vis20-identity label:nth-child(3),.sheet-vis20-identity label:nth-child(4){grid-column:auto}.sheet-vis20-tabs{grid-template-columns:repeat(4,1fr)}.sheet-vis20-stats{grid-template-columns:repeat(3,1fr)}.sheet-vis20-socialgrid{grid-template-columns:1fr}.sheet-vis20-clubrail{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:720px){.sheet-vis20-hero{min-height:330px}.sheet-vis20-brand{min-height:130px}.sheet-vis20-identity{grid-template-columns:1fr 1fr}.sheet-vis20-identity .sheet-vis20-wide{grid-column:1/3}.sheet-vis20-tabs{grid-template-columns:repeat(2,1fr)}.sheet-vis20-stats{grid-template-columns:1fr 1fr}.sheet-vis20-two,.sheet-vis20-socialbottom{grid-template-columns:1fr}.sheet-vis20-row{grid-template-columns:1fr}.sheet-vis20-th{display:none}.sheet-vis20-actions{justify-content:flex-start}.sheet-vis20-libraryhead{align-items:flex-start;flex-direction:column}.sheet-vis20-tools{width:100%;flex-wrap:wrap}.sheet-vis20-tools input{min-width:0;flex:1}.sheet-vis20-clubrail{grid-template-columns:repeat(2,1fr)}.sheet-vis20-statusrow{grid-template-columns:1fr auto}.sheet-vis20-statusrow>span:last-child{grid-column:1/3}.sheet-vis20-footer{flex-direction:column;gap:5px}}
+
+
+/* VIS-21 / ROLL20 CHROME INTEGRATION — specimen only.
+   Nine-sliced decorative frames preserve corner proportions across dynamic panel heights.
+   Never replace real inputs, repeaters, or hidden state gates with art. */
+.sheet-vis20-panel{isolation:isolate}
+.sheet-vis20-panel:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:14px solid transparent;
+  border-image-source:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/panels/panel-frame-wide.png");
+  border-image-slice:135 135 135 135;
+  border-image-width:14px;
+  border-image-repeat:stretch;
+  pointer-events:none;
+  z-index:2;
+}
+/* Tall frame source gives the compact Socials left column a related, not stretched, identity. */
+.sheet-vis20-socialleft .sheet-vis20-panel:after{
+  border-image-source:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/panels/panel-frame-sidebar-tall.png");
+  border-image-slice:205 200 205 200;
+}
+/* Real section headers stay HTML; the raster only supplies a quiet ornamental divider. */
+.sheet-vis20-panelhead,.sheet-vis20-libraryhead{
+  position:relative;
+  padding-bottom:14px;
+}
+.sheet-vis20-panelhead:after,.sheet-vis20-libraryhead:after{
+  content:"";
+  position:absolute;
+  height:12px;
+  left:10px;
+  right:10px;
+  bottom:-3px;
+  background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/dividers/divider-bar-amber.png");
+  background-position:center;
+  background-size:100% 64px;
+  background-repeat:no-repeat;
+  pointer-events:none;
+}
+/* Wide section plates use the short source image as a centered crop, not a distorted panel frame. */
+.sheet-vis20-pagehead{
+  background-image:linear-gradient(90deg,rgba(6,8,9,.24),rgba(6,8,9,.40)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/panels/panel-frame-large.png");
+  background-position:center,center;
+  background-size:100% 100%,100% 200%;
+  background-repeat:no-repeat;
+}
+/* A quiet field texture is limited to static/read-only proof values.
+   Editable controls keep their inset fill and clear focus ring. */
+.sheet-vis20-fields input[readonly]{
+  background-color:#101518;
+  background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-dark.png");
+  background-size:100% 175%;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.sheet-vis20-identity input:focus,.sheet-vis20-identity select:focus,
+.sheet-vis20-fields input:focus,.sheet-vis20-fields select:focus,
+.sheet-vis20-stat input:focus,.sheet-vis20-tools input:focus{
+  outline:2px solid #e6a449;
+  outline-offset:1px;
+  border-color:#e6a449;
+  background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-active.png");
+  background-size:100% 175%;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+/* Keep interactions and labels clear at narrow widths. Art never sets control geometry. */
+@media(max-width:720px){
+  .sheet-vis20-panel:after{border-image-width:10px}
+  .sheet-vis20-panelhead:after,.sheet-vis20-libraryhead:after{left:6px;right:6px}
+}
