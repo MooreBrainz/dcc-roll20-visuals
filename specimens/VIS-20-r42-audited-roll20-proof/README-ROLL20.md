@@ -54,3 +54,10 @@ See [VIS-22-NAVIGATION-CONTROLS-QA.md](VIS-22-NAVIGATION-CONTROLS-QA.md) for exa
 VIS-23 adds quiet recessed fields, compact five-stat tiles, readable source-aware status pills, and subdued skill/spell type chips. It is a CSS-only visual refinement; the existing R42 relationship mapping and all preview HTML/action labels remain unchanged.
 
 See [VIS-23-FIELDS-STATS-STATUS-QA.md](VIS-23-FIELDS-STATS-STATUS-QA.md) for the detailed mapping and Roll20 review checklist. Load the current `roll20-preview.css`; keep HTML and JSON as they are.
+
+
+## VIS-23B / VIS-24 — Colour Pills and Responsive Density
+
+The square neutral Skills/Spells pills from VIS-23 were rejected and corrected to rounded, colour-coded type/family tags following the current R42 tone styling. VIS-24 adds medium/narrow window row wrapping, club name resilience, and a compact mobile Popularity layout.
+
+**Important: this revision updates both HTML and CSS**, because the ten static specimen pills need descriptive colour classes. No field names, actions, mechanics or worker relationships changed. After copying both files into Roll20, consult [VIS-24-DENSITY-AND-PILLS-QA.md](VIS-24-DENSITY-AND-PILLS-QA.md) for the visual review gate. Stat tiles remain provisional until the engineering sheet is merged.
