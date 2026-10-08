@@ -217,3 +217,135 @@
 }
 /* Navigation buttons intentionally remain plain metal; selected tab is the
    single stronger amber state. No new ornate nav-tab art in this pass. */
+
+
+/* VIS-22 / ENGRAVED NAVIGATION AND ACTION CONTROLS
+   Decorative only: preserve the 7 existing nav labels/span placeholders and
+   every Roll20 action name. Accent the active tab, not the whole control rail. */
+
+/* The source texture is very dark. Its artwork is kept underneath a charcoal
+   scrim to match the approved VIS-21E muted-bronze chrome. */
+.sheet-vis20-tabs label,.sheet-vis20-tabs span{
+  min-width:0;
+  position:relative;
+  color:#c1c4c0;
+  border-color:#4a4c4d;
+  text-shadow:0 1px 2px #000;
+  background-color:#101315;
+  background-image:
+    linear-gradient(180deg,rgba(9,12,14,.39),rgba(9,12,14,.62)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-dark.png");
+  background-size:100% 100%,100% 170%;
+  background-position:center,center;
+  background-repeat:no-repeat,no-repeat;
+  box-shadow:inset 0 1px 0 rgba(217,208,183,.13),inset 0 -2px 0 rgba(0,0,0,.7);
+}
+.sheet-vis20-tabs span{color:#a6aaa8;cursor:default}
+.sheet-vis20-tabs label{cursor:pointer}
+.sheet-vis20-tabs label:hover{
+  color:#ece5d8;
+  border-color:#75664e;
+  background-image:
+    linear-gradient(180deg,rgba(8,11,12,.25),rgba(8,11,12,.46)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-dark.png");
+}
+#vis20-character:checked~.sheet-vis20-shell .sheet-vis20-tabs label[for=vis20-character],
+#vis20-skills:checked~.sheet-vis20-shell .sheet-vis20-tabs label[for=vis20-skills],
+#vis20-socials:checked~.sheet-vis20-shell .sheet-vis20-tabs label[for=vis20-socials]{
+  color:#f4c27a;
+  border-color:#947349;
+  background-color:#17120e;
+  background-image:
+    linear-gradient(180deg,rgba(8,10,11,.43),rgba(8,10,11,.49)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/fields/field-frame-active.png");
+  background-size:100% 100%,100% 170%;
+  background-position:center,center;
+  background-repeat:no-repeat,no-repeat;
+  box-shadow:inset 0 1px 0 rgba(247,187,97,.23),inset 0 -2px 0 rgba(193,117,32,.4),0 0 6px rgba(231,145,42,.09);
+}
+#vis20-character:focus-visible~.sheet-vis20-shell .sheet-vis20-tabs label[for=vis20-character],
+#vis20-skills:focus-visible~.sheet-vis20-shell .sheet-vis20-tabs label[for=vis20-skills],
+#vis20-socials:focus-visible~.sheet-vis20-shell .sheet-vis20-tabs label[for=vis20-socials]{
+  outline:2px solid #d2b37a;
+  outline-offset:2px;
+}
+
+/* Consistent compact brushed-metal buttons. This includes the existing
+   CHECK / SEARCH / DETAIL / ROLL / PREP / HOT / ADD COMBAT examples. */
+.sheet-vis20-stat button,.sheet-vis20-tools button,.sheet-vis20-actions button{
+  min-height:31px;
+  padding:5px 10px;
+  border:1px solid #566268;
+  border-radius:2px;
+  clip-path:polygon(5px 0,calc(100% - 5px) 0,100% 5px,100% calc(100% - 5px),calc(100% - 5px) 100%,5px 100%,0 calc(100% - 5px),0 5px);
+  background:linear-gradient(180deg,#252b2f 0%,#171c20 46%,#0e1315 100%);
+  color:#e2e4e1;
+  font-family:"Arial Narrow",Arial,Helvetica,sans-serif;
+  font-weight:800;
+  font-size:10px;
+  letter-spacing:.04em;
+  text-shadow:0 1px 1px #000;
+  box-shadow:inset 0 1px 0 rgba(231,237,238,.10),inset 0 -2px 0 rgba(0,0,0,.7);
+  cursor:pointer;
+}
+/* Correct the previous proof's unintended vivid-blue emphasis on the last
+   library toolbar button before mapping actual primary actions. */
+.sheet-vis20-tools button:last-child{
+  border-color:#566268;
+  box-shadow:inset 0 1px 0 rgba(231,237,238,.10),inset 0 -2px 0 rgba(0,0,0,.7);
+}
+/* Primary add/learn and HOT remain modest warm-bronze signals. */
+.sheet-vis20-tools button[name="act_vn_add_skill"],
+.sheet-vis20-tools button[name="act_vn_learn_spell"],
+.sheet-vis20-actions button.sheet-vis20-gold{
+  border-color:#806745;
+  color:#e8c490;
+  background:linear-gradient(180deg,#30281b 0%,#1c1b18 44%,#121313 100%);
+}
+/* Combat routing uses muted rust, not an aggressive alert glow. */
+.sheet-vis20-actions button.sheet-vis20-red{
+  border-color:#855546;
+  color:#dfaca1;
+  background:linear-gradient(180deg,#30201e 0%,#201716 44%,#151112 100%);
+}
+/* Rolls are slightly more legible as an actionable steel variant. */
+.sheet-vis20-actions button[name="act_rollskill"]{
+  border-color:#637078;
+  color:#d8e1e6;
+}
+/* Hover and press states never recolor the entire panel. */
+.sheet-vis20-stat button:hover:not(:disabled),
+.sheet-vis20-tools button:hover:not(:disabled),
+.sheet-vis20-actions button:hover:not(:disabled){
+  border-color:#b19b75;
+  color:#fff2db;
+  box-shadow:inset 0 1px 0 rgba(237,221,185,.2),inset 0 0 0 1px rgba(181,147,85,.18);
+}
+.sheet-vis20-stat button:active:not(:disabled),
+.sheet-vis20-tools button:active:not(:disabled),
+.sheet-vis20-actions button:active:not(:disabled){
+  background:linear-gradient(180deg,#0c1013,#1a2022);
+}
+.sheet-vis20-stat button:focus-visible,
+.sheet-vis20-tools button:focus-visible,
+.sheet-vis20-actions button:focus-visible{
+  outline:2px solid #d2b37a;
+  outline-offset:2px;
+}
+.sheet-vis20-stat button:disabled,
+.sheet-vis20-tools button:disabled,
+.sheet-vis20-actions button:disabled{
+  opacity:.42;
+  cursor:default;
+  box-shadow:none;
+}
+/* Keep long tab names within their plates at narrow sidebar widths.
+   Existing tab-grid wrapping is intentionally retained. */
+@media(max-width:390px){
+  .sheet-vis20-tabs label,.sheet-vis20-tabs span{
+    font-size:11px;
+    padding:5px 4px;
+    letter-spacing:.015em;
+    overflow-wrap:anywhere;
+  }
+}
