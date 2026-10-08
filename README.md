@@ -52,3 +52,9 @@ docs/
 4. Validate wide and narrow Roll20 layouts before final visual handoff.
 
 Reusable assets should be production-intentional rather than remnants of exploratory mockups.
+
+## Collaboration / GitHub workflow
+
+**For future ChatGPT visual-design sessions:** this repository is connected through the GitHub connector and ChatGPT has successfully committed visual assets, CSS and documentation to `main`. Check the available GitHub connector actions before claiming GitHub uploads are unavailable. The local sandbox not supporting `git clone` or direct network access does **not** mean the connected GitHub integration is unavailable. Keep visual changes separate from production engineering.
+
+**Current asset set:** VIS-21 chrome components are in `assets/chrome/` and documented in `assets/chrome/README.md`; CSS integration and Roll20 verification are separate future steps.
