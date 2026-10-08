@@ -47,3 +47,20 @@ If Roll20 strips `border-image`, the original 1px CSS panel borders and dark bac
 ## Promotion gate
 
 This is **VIS-21 visual work only**. Nothing is approved for production until the sheet is visually checked inside Roll20. R42's original system data, hidden state gates, and repeating-section relationships remain authoritative.
+
+
+## VIS-21D — Unified Page Title Nameplates
+
+The original full-width `panel-frame-large.png` treatment was unsuitable for wide page headings. VIS-21B temporarily replaced it with a faint gradient; VIS-21C restored an actual compact art nameplate for **Core Character State**.
+
+VIS-21D now applies the **same compact metal nameplate pattern to all three active proof pages**:
+
+- Character — **Core Character State**
+- Skills & Spells — **Entry-Heavy Libraries**
+- Socials — **Public Presence**
+
+The nameplate stays at **455 px maximum width** inside the page heading rather than stretching to the full viewport. The full-width heading behind it remains quiet dark metal. Existing ornamental content panel borders and dividers remain unchanged. Text remains live HTML.
+
+The CSS has responsive adjustments at <=720 px and <=390 px for heading wraps. Structural checks confirmed the three page heading containers and CSS selectors, unchanged proof HTML, and balanced CSS braces. An attempted Chromium screenshot run stalled in the current local runtime, so **no new live browser or Roll20 visual test is claimed for VIS-21D**. The earlier VIS-21C local nameplate preview was a separate test.
+
+**Review next:** paste latest CSS in the Roll20 sandbox; check Character, Skills & Spells, and Socials at normal and narrow widths. Specifically look for the full nameplate being visible, long titles staying within the frame, and whether the right-side provenance note remains readable.
