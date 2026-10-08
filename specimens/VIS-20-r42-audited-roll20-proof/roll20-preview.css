@@ -189,3 +189,31 @@
     font-size:19px;
   }
 }
+
+
+/* VIS-21E / MUTED METAL CHROME
+   Address live Roll20 review: glowing orange borders compete with editable fields.
+   Darken only decorative rasters, retain clear text and focus/selected states. */
+.sheet-vis20-panel:after{
+  filter:brightness(.67) saturate(.55);
+  opacity:.90;
+}
+.sheet-vis20-panelhead:after,.sheet-vis20-libraryhead:after{
+  filter:brightness(.62) saturate(.50);
+  opacity:.80;
+}
+/* Visible page nameplate, now weathered bronze instead of hot orange. */
+.sheet-vis20-page > .sheet-vis20-pagehead{
+  border-bottom-color:#736047;
+  box-shadow:inset 0 1px 0 rgba(179,148,99,.1),0 3px 10px rgba(0,0,0,.28);
+}
+.sheet-vis20-page > .sheet-vis20-pagehead > div:first-child{
+  background-image:
+    linear-gradient(180deg,rgba(8,10,12,.16),rgba(8,10,12,.29)),
+    url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/chrome/panels/panel-frame-large.png");
+  background-size:100% 100%,100% 180%;
+  background-position:center,center;
+  background-repeat:no-repeat,no-repeat;
+}
+/* Navigation buttons intentionally remain plain metal; selected tab is the
+   single stronger amber state. No new ornate nav-tab art in this pass. */
