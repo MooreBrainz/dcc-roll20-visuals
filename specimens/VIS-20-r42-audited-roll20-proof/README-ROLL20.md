@@ -40,3 +40,10 @@ The approved industrial chrome assets are now referenced from the proof CSS. Res
 The optional chrome is **presentation only**; it does not change the HTML, actions, repeating sections or runtime mechanics. See [VIS-21-CHROME-QA.md](VIS-21-CHROME-QA.md) for the exact asset map, smoke-test notes and the live Roll20 review checklist.
 
 Use the current `roll20-preview.css` with the existing `roll20-preview.html` in the sandbox.
+
+
+## VIS-22 — Navigation and Action Control Chrome
+
+The three working preview tabs and all four placeholder tabs now share dark engraved-metal navigation plates with a **restrained** warm selected state. Buttons retain their actual proof labels and receive steel, bronze or muted-rust visual treatments. Original R42 action mechanics have not been implemented in this visual specimen.
+
+See [VIS-22-NAVIGATION-CONTROLS-QA.md](VIS-22-NAVIGATION-CONTROLS-QA.md) for exact mappings and the Roll20 visual review checks. Update CSS only; the current preview HTML remains unchanged.
