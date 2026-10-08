@@ -119,11 +119,11 @@
 }
 
 
-/* VIS-21C / VISIBLE CHARACTER NAMEPLATE — replaces VIS-21B.
-   Scope only to Character's Core Character State heading.
+/* VIS-21D / SHARED PAGE TITLE NAMEPLATES — supersedes VIS-21C.
+   Character, Skills & Spells, Socials: one fixed-width metal nameplate per page.
    Real text stays HTML; the graphic is a fixed-width backdrop, not a
    full-width stretched border or a panel covering interactive content. */
-.sheet-vis20-page-character > .sheet-vis20-pagehead{
+.sheet-vis20-page > .sheet-vis20-pagehead{
   display:flex;
   flex-wrap:wrap;
   align-items:center;
@@ -137,10 +137,10 @@
   background-image:linear-gradient(180deg,#181d20,#0c1012);
   box-shadow:inset 0 1px 0 rgba(240,185,94,.14),0 3px 10px rgba(0,0,0,.28);
 }
-.sheet-vis20-page-character > .sheet-vis20-pagehead:after{
+.sheet-vis20-page > .sheet-vis20-pagehead:after{
   content:none;
 }
-.sheet-vis20-page-character > .sheet-vis20-pagehead > div:first-child{
+.sheet-vis20-page > .sheet-vis20-pagehead > div:first-child{
   position:relative;
   display:flex;
   flex-direction:column;
@@ -156,36 +156,36 @@
   background-position:center;
   background-repeat:no-repeat;
 }
-.sheet-vis20-page-character > .sheet-vis20-pagehead > div:first-child small{
+.sheet-vis20-page > .sheet-vis20-pagehead > div:first-child small{
   color:#f0b35b;
 }
-.sheet-vis20-page-character > .sheet-vis20-pagehead > div:first-child h2{
+.sheet-vis20-page > .sheet-vis20-pagehead > div:first-child h2{
   position:relative;
   color:#f0e7da;
   margin:3px 0 0;
   line-height:1.18;
 }
 @media(max-width:720px){
-  .sheet-vis20-page-character > .sheet-vis20-pagehead{
+  .sheet-vis20-page > .sheet-vis20-pagehead{
     display:block;
     padding:5px 8px 10px;
   }
-  .sheet-vis20-page-character > .sheet-vis20-pagehead > div:first-child{
+  .sheet-vis20-page > .sheet-vis20-pagehead > div:first-child{
     width:100%;
     padding:16px 27px;
   }
-  .sheet-vis20-page-character > .sheet-vis20-pagehead > span{
+  .sheet-vis20-page > .sheet-vis20-pagehead > span{
     display:block;
     margin:3px 9px 0;
     text-align:left;
   }
 }
 @media(max-width:390px){
-  .sheet-vis20-page-character > .sheet-vis20-pagehead > div:first-child{
+  .sheet-vis20-page > .sheet-vis20-pagehead > div:first-child{
     min-height:112px;
     padding:19px 23px;
   }
-  .sheet-vis20-page-character > .sheet-vis20-pagehead > div:first-child h2{
+  .sheet-vis20-page > .sheet-vis20-pagehead > div:first-child h2{
     font-size:19px;
   }
 }
