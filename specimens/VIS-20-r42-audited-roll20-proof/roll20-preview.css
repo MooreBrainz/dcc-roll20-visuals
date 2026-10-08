@@ -540,3 +540,71 @@
   .sheet-vis20-stat>small{font-size:10px}
   .sheet-vis20-statusrow{gap:6px}
 }
+
+
+/* VIS-23B / ROUNDED COLOUR CODED SKILL SPELL PILLS
+   Restore the existing R42 visual grammar: compact rounded type/family tags.
+   The VIS-20 mock sample labels are illustrative; these classes are art
+   hooks only, NOT new attributes, source types, or worker mechanics. */
+.sheet-vis20-skilltable .sheet-vis20-row i,
+.sheet-vis20-spelltable .sheet-vis20-row i{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  max-width:100%;
+  min-height:22px;
+  padding:3px 9px;
+  margin:2px 3px 2px 0;
+  border-radius:999px;
+  border:1px solid #55616a;
+  background:#202832;
+  color:#d5dce2;
+  font-size:10px;
+  line-height:1.2;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.025em;
+  white-space:normal;
+  text-align:center;
+  vertical-align:middle;
+  overflow-wrap:anywhere;
+}
+/* Tonal vocabulary mirrors the underlying R42 type/family colours:
+   ATTACK=red, utility/check=cyan, animal=violet, ICE=cool blue. */
+.sheet-vis20-row i.sheet-vis20-tone-attack{
+  border-color:#9c2c39;
+  background:#32151b;
+  color:#ff929e;
+}
+.sheet-vis20-row i.sheet-vis20-tone-utility{
+  border-color:#2d697f;
+  background:#112631;
+  color:#91def6;
+}
+.sheet-vis20-row i.sheet-vis20-family-animal{
+  border-color:#7562a5;
+  background:#211b35;
+  color:#d2baff;
+}
+.sheet-vis20-row i.sheet-vis20-family-cold{
+  border-color:#367b9c;
+  background:#112936;
+  color:#9bdff6;
+}
+/* Noncanonical sample-family names below are illustrative display choices,
+   not new R42 categories or claims about hidden catalog values. */
+.sheet-vis20-row i.sheet-vis20-family-movement{
+  border-color:#507a69;
+  background:#182922;
+  color:#b0d9bd;
+}
+.sheet-vis20-row i.sheet-vis20-family-sense{
+  border-color:#53788b;
+  background:#192b35;
+  color:#add8e7;
+}
+.sheet-vis20-row i.sheet-vis20-family-area{
+  border-color:#736297;
+  background:#251e33;
+  color:#cab6e9;
+}
