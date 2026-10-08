@@ -47,3 +47,10 @@ Use the current `roll20-preview.css` with the existing `roll20-preview.html` in 
 The three working preview tabs and all four placeholder tabs now share dark engraved-metal navigation plates with a **restrained** warm selected state. Buttons retain their actual proof labels and receive steel, bronze or muted-rust visual treatments. Original R42 action mechanics have not been implemented in this visual specimen.
 
 See [VIS-22-NAVIGATION-CONTROLS-QA.md](VIS-22-NAVIGATION-CONTROLS-QA.md) for exact mappings and the Roll20 visual review checks. Update CSS only; the current preview HTML remains unchanged.
+
+
+## VIS-23 — Fields, Stats and Status
+
+VIS-23 adds quiet recessed fields, compact five-stat tiles, readable source-aware status pills, and subdued skill/spell type chips. It is a CSS-only visual refinement; the existing R42 relationship mapping and all preview HTML/action labels remain unchanged.
+
+See [VIS-23-FIELDS-STATS-STATUS-QA.md](VIS-23-FIELDS-STATS-STATUS-QA.md) for the detailed mapping and Roll20 review checklist. Load the current `roll20-preview.css`; keep HTML and JSON as they are.
