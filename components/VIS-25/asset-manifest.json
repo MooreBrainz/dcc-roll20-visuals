@@ -21,7 +21,9 @@
   "reserved_assets": [
     "assets/chrome/panels/panel-frame-large.png",
     "assets/chrome/dividers/divider-bar-amber.png",
-    "assets/banners/races/gritty_tiger_warrior_banner_roll20.jpg"
+    "assets/banners/races/gritty_tiger_warrior_banner_roll20.jpg",
+    "assets/banners/races/race-tigran-1496x144.jpg",
+    "assets/banners/class-overlays/class-berserker-1496x144.png"
   ],
   "preserved_state_systems": [
     "tabs and entity modes",
@@ -33,5 +35,18 @@
     "safe room loot resolution"
   ],
   "production_ready": false,
-  "status": "pilot CSS prepared, pending latest development source and Roll20 QA"
+  "status": "pilot CSS prepared, pending latest development source and Roll20 QA",
+  "vis26_header_fit": {
+    "target_css_pixels": {
+      "width": 1496.36,
+      "height": 143.86
+    },
+    "target_artboard_pixels": {
+      "width": 1496,
+      "height": 144
+    },
+    "specimen": "specimens/VIS-26-header-fit/",
+    "integration_hooks": "components/VIS-26/header-layer-hooks.css",
+    "live_roll20_approved": false
+  }
 }

@@ -1,4 +1,4 @@
-# VIS-26 — Development Header Fit Contract (draft)
+# VIS-26 — Development Header Fit Contract (assets published, Roll20 review pending)
 
 **Visual-design milestone only; no production engine files changed.**
 
@@ -21,12 +21,14 @@ The development sheet's reported header inner bounds are approximately **1496.36
 - If header width differs materially, fit needs explicit responsive design review rather than distorting or cropping the portrait.
 - Class alpha overlays: `pointer-events:none`; no child element should intercept input clicks.
 
-## Current local candidate files
+## Published Roll20 assets and dedicated fit specimen
 
-- `tigran_race_banner_1496x144.png` — composed from the new Tigran artwork for the current header ratio.
-- `tigran_berserker_overlay_1496x144.png` — transparent Berserker art layer, same pixel dimensions.
+- `assets/banners/races/race-tigran-1496x144.jpg` — 1496 × 144 JPEG, new Tigran artwork; source artwork is preserved locally.
+- `assets/banners/class-overlays/class-berserker-1496x144.png` — 1496 × 144 PNG with alpha transparency, separate class layer.
+- `specimens/VIS-26-header-fit/` — **dedicated 144px header test** with independent class-overlay visibility toggle.
+- `components/VIS-26/header-layer-hooks.css` — opt-in engineering-selector integration scaffold. Requires review of the latest source HTML/CSS before use.
 
-These are **local candidate assets pending binary publication and live Roll20 fit testing**. Their file names are not to be referenced from the proof CSS until the actual binary objects exist in `assets/banners/`. The old working race banner remains in GitHub as a safe fallback until the replacement is validated.
+The binary files are published and checksum-verified. **Live Roll20 fit remains unapproved.** Keep the old working race banner as a safe fallback. The older VIS-20 proof has a 245px hero and therefore must not be repointed blindly to the new shallow assets.
 
 ## Review sequence
 

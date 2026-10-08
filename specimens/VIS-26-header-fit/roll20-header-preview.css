@@ -1,0 +1,37 @@
+/* VIS-26 — dedicated 1496×144 Roll20 header-art fit specimen.
+   Static visual proof only. Does not replace the real engineering sheet. */
+.sheet-vis26-root{font-family:Arial,Helvetica,sans-serif;color:#eee9e1;background:#090c0e;padding:10px;min-width:0}
+.sheet-vis26-root *{box-sizing:border-box}
+.sheet-vis26-switch{margin:0 6px 10px 0;vertical-align:middle;accent-color:#aa8454}
+.sheet-vis26-toggle-label{display:inline-block;margin-bottom:9px;font-size:12px;color:#cbc3b7}
+.sheet-vis26-header{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:1496px;height:144px;margin:0 auto;background:#080a0c;border:1px solid #5a4c3e;box-shadow:inset 0 0 0 3px rgba(2,3,4,.65),0 5px 16px rgba(0,0,0,.6)}
+.sheet-vis26-raceart,.sheet-vis26-classart{position:absolute;inset:0;pointer-events:none;background-position:center center;background-size:100% 100%;background-repeat:no-repeat}
+.sheet-vis26-raceart{z-index:0;background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/races/race-tigran-1496x144.jpg")}
+.sheet-vis26-classart{z-index:1;background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/class-overlays/class-berserker-1496x144.png");opacity:.34}
+.sheet-vis26-root .sheet-vis26-switch:not(:checked)~.sheet-vis26-header .sheet-vis26-classart{display:none}
+.sheet-vis26-header:after{content:"";position:absolute;inset:5px;border:1px solid rgba(151,112,72,.26);pointer-events:none;z-index:3}
+.sheet-vis26-content{position:relative;z-index:2;display:grid;grid-template-columns:225px minmax(0,1fr) minmax(210px,29%);height:100%;align-items:end}
+.sheet-vis26-brand{align-self:center;padding:12px 18px 14px;text-shadow:0 2px 4px #000;min-width:0}
+.sheet-vis26-brand strong{display:block;color:#d7a258;font-size:20px;line-height:1.06;letter-spacing:.025em;font-weight:900;text-transform:uppercase}
+.sheet-vis26-brand small{display:block;color:#b7aea3;font-size:9px;letter-spacing:.12em;padding-top:7px}
+.sheet-vis26-readouts{display:grid;grid-template-columns:minmax(90px,1.25fr) minmax(78px,.85fr) minmax(120px,1.35fr) minmax(65px,.75fr) 52px 52px;gap:5px;align-items:end;padding:12px 5px 16px;min-width:0;background:linear-gradient(90deg,rgba(4,5,6,.50),rgba(4,5,6,.66) 75%,rgba(4,5,6,.03))}
+.sheet-vis26-readouts>label{display:flex;flex-direction:column;min-width:0;gap:4px;font-size:9px;letter-spacing:.07em;color:#c5b8aa}
+.sheet-vis26-plate{display:flex;align-items:center;width:100%;min-width:0;min-height:36px;padding:7px 8px;background:rgba(8,12,14,.92);border:1px solid #655a4e;border-bottom-color:#90734b;border-radius:2px;color:#eee7dc;font-size:12px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:inset 0 1px 4px #000}
+.sheet-vis26-plate select{width:100%;min-width:0;color:inherit;background:#0b1012;border:0;font:inherit}
+.sheet-vis26-artspace{min-height:1px}
+.sheet-vis26-notice{max-width:1496px;margin:8px auto 0;color:#b8b4aa;font-size:11px;line-height:1.5}
+@media(max-width:1100px){
+ .sheet-vis26-header{height:auto;min-height:144px}
+ .sheet-vis26-raceart,.sheet-vis26-classart{background-size:auto 100%;background-position:right center}
+ .sheet-vis26-content{grid-template-columns:190px minmax(0,1fr);padding-right:3px;min-height:144px}
+ .sheet-vis26-artspace{display:none}
+ .sheet-vis26-readouts{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:9px 8px 9px}
+ .sheet-vis26-plate{min-height:28px;padding:5px 7px}
+}
+@media(max-width:610px){
+ .sheet-vis26-content{display:block;padding-bottom:8px}
+ .sheet-vis26-brand{padding:12px 13px 4px}
+ .sheet-vis26-brand strong{font-size:18px}
+ .sheet-vis26-readouts{grid-template-columns:repeat(2,minmax(0,1fr));padding:6px 10px 8px;background:rgba(4,5,6,.73)}
+ .sheet-vis26-header{min-height:252px}
+}

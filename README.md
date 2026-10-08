@@ -70,3 +70,9 @@ The first **integration-preparation package** is ready at [`components/VIS-25/`]
 - a read-only source compatibility checker and a live Roll20 QA/rollback checklist.
 
 The scoped bridge **does not modify the development branch** and must not be treated as ready for promotion. Use it only in a disposable engineering-source sandbox after checking the latest development HTML/CSS/worker. The earlier VIS-20/VIS-24 proof is a visual reference, not production markup.
+
+## VIS-26 — 1496 × 144 Header Artwork
+
+The new [Tigran race banner and transparent Berserker class overlay](assets/banners/README.md) are now published. Use the [dedicated VIS-26 header fit specimen](specimens/VIS-26-header-fit/README.md) to test the new 144px height.
+
+The old 245px VIS-20 proof retains its earlier banner intentionally: repointing it would distort the newly sized art. Integrate into the actual development header only after the latest engineering snapshot is reviewed and the VIS-26 fit is confirmed in Roll20.

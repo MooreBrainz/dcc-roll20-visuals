@@ -1,0 +1,35 @@
+/* VIS-26 — opt-in R42-selector header art hooks; illustrative integration scaffold.
+   Not a production implementation. Actual latest engineering markup must be audited.
+   Add two PRESENTATIONAL children as FIRST children of existing .sheet-vn-header:
+   <div class="sheet-vis26-race-art" aria-hidden="true"></div>
+   <div class="sheet-vis26-class-art" aria-hidden="true"></div>
+   Add sheet-vis26-art-ready and sheet-vis26-race-tigran on root header
+   and add sheet-vis26-class-berserker only when a real Berserker class is active.
+   This file does not derive class/race state and must not replace worker logic. */
+.sheet-vn-header.sheet-vis26-art-ready{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.sheet-vn-header.sheet-vis26-art-ready .sheet-vis26-race-art,
+.sheet-vn-header.sheet-vis26-art-ready .sheet-vis26-class-art{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-position:center center;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
+.sheet-vn-header.sheet-vis26-art-ready.sheet-vis26-race-tigran .sheet-vis26-race-art{
+  background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/races/race-tigran-1496x144.jpg");
+}
+.sheet-vn-header.sheet-vis26-art-ready .sheet-vis26-class-art{display:none}
+.sheet-vn-header.sheet-vis26-art-ready.sheet-vis26-class-berserker .sheet-vis26-class-art{
+  display:block;
+  background-image:url("https://raw.githubusercontent.com/MooreBrainz/dcc-roll20-visuals/main/assets/banners/class-overlays/class-berserker-1496x144.png");
+  opacity:.34;
+}
+/* Child stack order and stacking contexts must be checked in the latest
+   engineering HTML/CSS. Do not globally override existing header children:
+   avatar, identity, status marks and entity controls retain their contract. */
