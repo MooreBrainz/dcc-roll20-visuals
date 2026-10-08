@@ -58,3 +58,15 @@ Reusable assets should be production-intentional rather than remnants of explora
 **For future ChatGPT visual-design sessions:** this repository is connected through the GitHub connector and ChatGPT has successfully committed visual assets, CSS and documentation to `main`. Check the available GitHub connector actions before claiming GitHub uploads are unavailable. The local sandbox not supporting `git clone` or direct network access does **not** mean the connected GitHub integration is unavailable. Keep visual changes separate from production engineering.
 
 **Current asset set:** VIS-21 chrome components are in `assets/chrome/` and documented in `assets/chrome/README.md`; CSS integration and Roll20 verification are separate future steps.
+
+
+## VIS-25 — Source-Mapped Component Bridge
+
+The first **integration-preparation package** is ready at [`components/VIS-25/`](components/VIS-25/README.md). It includes:
+
+- an opt-in R42-selector-based CSS bridge (separate from the visual proof CSS);
+- an exact component-to-HTML/CSS contract map;
+- a machine-readable chrome asset manifest;
+- a read-only source compatibility checker and a live Roll20 QA/rollback checklist.
+
+The scoped bridge **does not modify the development branch** and must not be treated as ready for promotion. Use it only in a disposable engineering-source sandbox after checking the latest development HTML/CSS/worker. The earlier VIS-20/VIS-24 proof is a visual reference, not production markup.
