@@ -1,78 +1,26 @@
-# DCC Roll20 Visuals
+# DCC Roll20 Visual Assets
 
-Visual-design and reusable-asset repository for the Dungeon Crawler Carl Roll20 character sheet.
+This repository hosts visual artwork for the **Dungeon Crawler Carl Roll20 CSE character sheet**, plus the independent Action Tracker HUD assets.
 
-This repository is intentionally separate from production engineering. It contains visual assets, design tokens, Roll20 rendering specimens, documentation, and eventual handoff material. It does **not** define game mechanics or production release revisions.
+## Current supported artwork
 
-## Current state
+- `assets/headers/races/<race>/background.webp` — race-specific header backgrounds (30 races).
+- `assets/headers/races/<race>/character.webp` — race-specific transparent character art (30 races).
+- `assets/headers/classes/<class>/overlay.webp` — class-specific header overlays (51 classes).
+- `assets/brand/dcc-ttrpg-header-logo.webp` — DCC TTRPG sheet logo.
+- `assets/banners/class-overlays/class-berserker-1496x144.png` — retained legacy Berserker header artwork, kept in place to preserve existing links.
+- `action-tracker/` — separate approved Roll20 Action Tracker HUD and release materials; not part of the character-sheet beautification cleanup.
 
-The earlier VIS-06E proof assets and test specimen have been removed so the repository can be rebuilt from a clean implementation baseline.
+## Project streams
 
-The directory scaffold, documentation, and provisional design tokens are retained. New assets and Roll20 specimens should be created only after they have been checked against the current sheet HTML/CSS/worker relationships.
+- **V## R##** — mechanically validated character-sheet systems.
+- **U## R##** — established header/utility visual development.
+- **DR# R#** — new independent visual design and UI test packages.
 
-## Governing direction
+New DR assets will be added only after visual approval and a Roll20 compatibility review. The default DR direction is **hybrid artwork + CSS**: shared decorative assets for panel frames and textures, HTML/CSS for text, controls, layout and responsive behavior.
 
-- **Drama in the frame; clarity in the fields.**
-- Cinematic, race-reactive header artwork.
-- Race defines the primary banner imagery.
-- Class adds a restrained secondary overlay.
-- Dark metal, charcoal, slate, bronze seams, and orange-gold emphasis.
-- Distress is concentrated around frames and edges; working surfaces remain quiet.
-- Header identity is display-only: Name / Race / Class / Entity / Level / Floor.
-- No Health or Mana indicators in the header.
-- The current Roll20 sheet systems and relationships remain authoritative.
-- Visual approval does not equal production promotion.
+## Cleanup record
 
-## Repository structure
+On 2026-10-30, abandoned VIS-series prototypes, chrome experiments, specimen sheets, and related drafts were removed from the default-branch repository tree. **This was a repository-structure cleanup, not a rewrite of Git history.** Their last complete state is preserved on branch `archive/pre-dr-cleanup-2026-10-30`. Existing race/class artwork, the DCC logo, and Action Tracker deliverables were not modified.
 
-```
-assets/
-  brand/
-  textures/
-  chrome/
-  banners/
-  badges/
-  icons/
-  chat/
-
-specimens/
-  header/
-  panels/
-  chat/
-
-tokens/
-docs/
-```
-
-## Next work
-
-1. Audit the current sheet HTML/CSS/worker relationships against the approved visual layouts.
-2. Build a new Roll20 rendering proof from that audit.
-3. Add only the reusable assets required by the new proof.
-4. Validate wide and narrow Roll20 layouts before final visual handoff.
-
-Reusable assets should be production-intentional rather than remnants of exploratory mockups.
-
-## Collaboration / GitHub workflow
-
-**For future ChatGPT visual-design sessions:** this repository is connected through the GitHub connector and ChatGPT has successfully committed visual assets, CSS and documentation to `main`. Check the available GitHub connector actions before claiming GitHub uploads are unavailable. The local sandbox not supporting `git clone` or direct network access does **not** mean the connected GitHub integration is unavailable. Keep visual changes separate from production engineering.
-
-**Current asset set:** VIS-21 chrome components are in `assets/chrome/` and documented in `assets/chrome/README.md`; CSS integration and Roll20 verification are separate future steps.
-
-
-## VIS-25 — Source-Mapped Component Bridge
-
-The first **integration-preparation package** is ready at [`components/VIS-25/`](components/VIS-25/README.md). It includes:
-
-- an opt-in R42-selector-based CSS bridge (separate from the visual proof CSS);
-- an exact component-to-HTML/CSS contract map;
-- a machine-readable chrome asset manifest;
-- a read-only source compatibility checker and a live Roll20 QA/rollback checklist.
-
-The scoped bridge **does not modify the development branch** and must not be treated as ready for promotion. Use it only in a disposable engineering-source sandbox after checking the latest development HTML/CSS/worker. The earlier VIS-20/VIS-24 proof is a visual reference, not production markup.
-
-## VIS-26 — 1496 × 144 Header Artwork
-
-The new [Tigran race banner and transparent Berserker class overlay](assets/banners/README.md) are now published. Use the [dedicated VIS-26 header fit specimen](specimens/VIS-26-header-fit/README.md) to test the new 144px height.
-
-The old 245px VIS-20 proof retains its earlier banner intentionally: repointing it would distort the newly sized art. Integrate into the actual development header only after the latest engineering snapshot is reviewed and the VIS-26 fit is confirmed in Roll20.
+Do not delete or rename published header artwork without checking current Roll20 CSS references; external sheet stylesheets may link directly to GitHub paths or commit-pinned URLs.
