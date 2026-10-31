@@ -1,11 +1,17 @@
-# DR1 R5 — Muted-rivet center texture
+# DR1 hybrid Combat → STATUS artwork
 
-Provisional graphic for the Combat → STATUS hybrid panel in the Dungeon Crawler Carl Roll20 CSE sheet.
+The assets in this directory are **provisional tests**, not an approved production visual standard.
 
-- `header-center-muted-rivets.webp`: 398 × 71 pixels; 1,684 bytes; horizontal repeat artwork
-- Sparse rivets, low-contrast scratches, muted charcoal metal. Derived from the DR1 R5 approved design direction.
-- Used alongside existing unchanged `header-left.webp` and `header-right.webp` corner caps.
-- CSS keeps header label, LIVE tag, spacing and responsiveness in actual HTML/CSS.
-- Asset is published for **DR1 R5 testing only**, not promoted as a final global design system.
+## Current DR1 R7 test
 
-Production reference URLs should be pinned to an immutable Git commit and should not use a moving `main` ref. All race/class header images must come from `assets/headers/`.
+- `header-center-muted-framed.webp` — 398×71 WebP, 2,314 bytes. Sparse muted rivets, with original orange upper/lower framing preserved in the same graphic.
+- `header-left.webp` and `header-right.webp` — original end caps, unchanged.
+- R7 uses a single CSS background stack: caps above center strip; no foreground pseudo-element overlays or stretching panels.
+- Center strip repeats horizontally and is compressed vertically by the same ratio as the caps. Text and LIVE badge remain real HTML.
+
+## Retained rollback assets
+
+- `header-center-muted-rivets.webp` — R5/R6 version without orange rails.
+- `header-center.webp` — original dense-rivet R2/R3 center.
+
+All production-style CSS URLs should be commit-pinned. Race and class artwork are separate, under `assets/headers/`. No DR asset should redefine mechanics or editable data. R7 must pass live Roll20 visual review before promotion.
