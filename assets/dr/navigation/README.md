@@ -1,7 +1,7 @@
-# DR1 R23 navigation tab texture
+# DR1 R23 — Custom navigation texture
 
-- `tab-metal.webp` — 256 × 72 px, 918 bytes, near-seamless charcoal brushed-metal graphic, colour-neutral.
-- Display purpose: background surface for the seven main navigation tabs. Not the same art as panel headers.
-- Functional role colours and active highlighting are **CSS only**, keyed by original Roll20 action button names and existing hidden tab-state inputs; no new navigation attributes or sheet-worker edits.
-- The graphic is TEST-ONLY until DR1 R23 passes live Roll20 verification. Preserve the established `assets/headers/` race/class art and `assets/dr/chrome/` graphics.
-- Production test CSS must reference the immutable commit SHA that adds this file, not the moving `main` branch.
+- `tab-metal-subtle.webp`: 256×72px, 298 bytes; intentionally quiet charcoal brushed metal (current R23 test).
+- `tab-metal.webp`: superseded first R23 experiment (too many sharp bright scratches); retained only for visual comparison and rollback.
+- Selection, hover, and seven role-colour indicators are rendered in CSS using the original Roll20 hidden tab-state controls and existing action names.
+- Graphics are for navigation only and are kept separate from the approved panel chrome and race/class header artwork.
+- R23 is a TEST CANDIDATE; publication here does not imply promotion of any sheet release. Use immutable commit-pinned URLs.
