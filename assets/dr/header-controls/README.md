@@ -1,8 +1,6 @@
-# DR1 R26 — LEVEL UP button artwork
+# LEVEL UP header control artwork (DR1)
 
-- `level-up-badge.webp` — WebP derivative of the user-supplied Neon Green Level Up Badge.png.
-- Rendered art: 240 × 80 px, approximately 5.4 KB. The source artwork is preserved proportionally.
-- Displayed only as a CSS background skin for the existing `button.sheet-vn-levelup-placeholder[name="act_vn_levelup_open"]`. No alternate control is introduced; the original action and click target remain unchanged.
-- CSS uses `background-size:contain` to avoid distorting the text and corner details at varying Roll20 widths.
-- This is DR1 R26 TEST artwork, not a production-promotion decision.
-- Keep the existing original race/class header artwork under `assets/headers/` and the DCC logo separate.
+- `level-up-badge.webp` — R26 opaque WebP; retained for rollback.
+- `level-up-badge-transparent.webp` — R27 transparent WebP with original badge art, 160 × 53 pixels, 4,442 bytes, alpha channel. Removes only the exterior black canvas; retains the dark inlay and green glow.
+
+R27 CSS applies the new image only to the existing Roll20 action button `act_vn_levelup_open`, with a transparent button surface and original dimensions and interaction behavior. LEVEL and FLOOR labels are centered, with their numbers remaining gold/bold. This is a TEST CANDIDATE, not a promoted release. Keep all artwork URLs pinned to an immutable commit.
